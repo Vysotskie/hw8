@@ -1,33 +1,36 @@
-* {margin: 0;
+* {
+ margin: 0;
  padding: 0;
  box-sizing: border-box;
 }
 
+/*Поставила flex*/
 .conteiner {
- display: grid;
- grid-template-rows: 150px 2fr 100px;
+ display: flex;
  justify-content: center;
- width: 100%;
- max-width: 1200px;
- height: 100vh;
 }
 
 .grid__conteiner {
+ width: 100%;
+ max-width: 1200px;
+ height: 100vh;
  display: grid;
- grid-auto-flow: row;
+ grid-template-columns: 1fr;
+ grid-template-rows: auto 1fr auto;
 }
 
 .header {
- background-color: #8fbc8f
+ background-color: darkseagreen;
 }
 
-.nav__list {
+.nav__conteiner {
  display: grid;
- grid-auto-flow: column;
- grid-template-columns: repeat (auto-fit, minmax(50px, 1fr));
- grid-template-rows: 50px;
- justify-items: stretch;
+ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ grid-auto-rows: 50px;
+ grid-gap: 10px;
  list-style-type: none;
+ padding-left: 60px;
+ padding-bottom: 10px;
 }
 
 .button {
@@ -49,23 +52,27 @@
 }
 
 .main {
- background-color: #4682b4;
+ background-color: steelblue;
+ display: grid;
+ align-content: flex-end;
 }
 
 .main__conteiner {
  display: grid;
+ grid-template-columns: repeat(4, minmax(50px, 1fr));
+ grid-template-rows: 50px 50px 50px 50px 50px;
  grid-gap: 20px;
+ padding: 100px 20px 50px 20px;
 }
 
 .main__item {
- display: grid;
- justify-content: center;
- align-content: center;
- min-width: 270px;
- min-height: 80px;
- background-color: #3333b6;
- font-size: 50px;
+ background-color: rgb(51, 51, 182);
  color: aliceblue;
+ font-size: 20px;
+ display: grid;
+ align-items: center;
+ justify-items: center;
+ font-size: 50px;
 }
 
 .three {
@@ -90,5 +97,6 @@
 }
 
 .footer {
- background-color: #87ceeb;
+ padding: 0;
+ background-color: skyblue;
 }
